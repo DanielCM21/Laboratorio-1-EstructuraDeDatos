@@ -7,6 +7,7 @@ public class lab_01 {
         {
 
             System.out.println("hola mundo.");
+            System.out.print("hola a todos, probando");
 
         }
         
