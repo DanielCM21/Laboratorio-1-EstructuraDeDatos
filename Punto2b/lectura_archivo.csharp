@@ -1,0 +1,49 @@
+using System.IO;
+using System;
+using System.Text;
+using System.Diagnostics;
+
+class Program {
+
+    static void Main(string[] args) {
+
+        string ruta = "Archivo\AccidentesDeTransito.csv";
+
+        Process currentProcess = Process.GetCurrentProcess();
+
+        Console.WriteLine("ESTADO: Leyendo archivo");
+
+        var watch = System.Diagnostics.Stopwatch.StartNew();
+
+        leer(ruta);
+
+        watch.Stop();
+
+        var elapsedMs = watch.ElapsedMilliseconds;
+
+        Console.WriteLine("ESTADO: Se leyo el archivo en {0} ms", elapsedMs);
+        
+        Console.WriteLine("Escriba el código a buscar: ");
+
+        string codigo = Console.ReadLine();
+
+        Console.WriteLine("ESTADO: Buscando registro...");
+
+        
+
+        watch = System.Diagnostics.Stopwatch.StartNew();
+
+        static void leer(string ruta) {
+
+        string[] lineas = System.IO.File.ReadAllLines(ruta);
+
+        int contador = 1;
+
+        foreach(string linea in lineas) {
+
+            System.Console.WriteLine("ESTADO: leyendo linea # {0}", contador);
+
+            contador++;
+
+        }
+    }
