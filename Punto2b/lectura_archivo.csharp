@@ -22,14 +22,7 @@ class Program {
         var elapsedMs = watch.ElapsedMilliseconds;
 
         Console.WriteLine("ESTADO: Se leyo el archivo en {0} ms", elapsedMs);
-        
-        Console.WriteLine("Escriba el código a buscar: ");
 
-        string codigo = Console.ReadLine();
-
-        Console.WriteLine("ESTADO: Buscando registro...");
-
-        
 
         watch = System.Diagnostics.Stopwatch.StartNew();
 
